@@ -579,7 +579,13 @@ require("mini.indentscope").setup({})
 require("mini.pairs").setup({})
 require("mini.trailspace").setup({})
 require("mini.bufremove").setup({})
-require("mini.notify").setup({})
+
+--- Removes notify notification spam in Python files
+require("mini.notify").setup({
+	lsp_progress = {
+		enable = false,
+	}
+})
 require("mini.icons").setup({})
 
 require("mini.diff").setup({
